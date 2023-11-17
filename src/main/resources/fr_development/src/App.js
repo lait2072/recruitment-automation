@@ -4,7 +4,6 @@ function App() {
   return (
     <div className="App">
       <Avtrization/>
-      <p>test</p>
     </div>
   );
 }
