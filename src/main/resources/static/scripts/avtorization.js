@@ -24,8 +24,10 @@ function closeHelp(event) {
 function check() {
 	var inp1 = document.querySelector('.input_email'),
 		inp2 = document.querySelector('.input_password')
-	console.log(inp1)
-	document.querySelector('.container_input_button').disabled = inp1.value && inp2.value ? false : "disabled";
+	if (inp2.value.length >= 6) {
+		document.querySelector('.container_input_button').disabled = inp1.value && inp2.value ? false : "disabled";
+	}
+	
 }
 	
 
