@@ -58,7 +58,7 @@
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M13.0282 13.8173C13.2672 13.479 13.7352 13.3985 14.0735 13.6375L21.1985 18.6719C21.5368 18.9109 21.6172 19.3789 21.3782 19.7172C21.1392 20.0555 20.6712 20.136 20.3329 19.897L13.2079 14.8626C12.8696 14.6236 12.7891 14.1556 13.0282 13.8173Z" fill="#2255EA"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M2.3895 8.5645C2.63005 8.22729 3.09841 8.14894 3.43562 8.3895L10.5995 13.5001H13.4006L20.5645 8.3895C20.9017 8.14894 21.3701 8.22729 21.6106 8.5645C21.8512 8.9017 21.7728 9.37007 21.4356 9.61062L14.0762 14.8606C13.9491 14.9513 13.7968 15.0001 13.6407 15.0001H10.3594C10.2033 15.0001 10.051 14.9513 9.92387 14.8606L2.5645 9.61062C2.22729 9.37007 2.14894 8.9017 2.3895 8.5645Z" fill="#2255EA"/>
 				</svg>
-					<input width="100%" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта" size="30" required />
+					<input class="input_email" width="100%" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта" size="30" onkeyup="check();" required />
 				</div>
 				<div class="container_input">
 				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,10 +67,10 @@
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M3 9C3 8.17157 3.67157 7.5 4.5 7.5H19.5C20.3284 7.5 21 8.17157 21 9V19.5C21 20.3284 20.3284 21 19.5 21H4.5C3.67157 21 3 20.3284 3 19.5V9ZM19.5 9H4.5V19.5H19.5V9Z" fill="#2255EA"/>
 					<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C11.3038 2.25 10.6361 2.52656 10.1438 3.01884C9.65156 3.51113 9.375 4.17881 9.375 4.875V8.25C9.375 8.66421 9.03921 9 8.625 9C8.21079 9 7.875 8.66421 7.875 8.25V4.875C7.875 3.78098 8.3096 2.73177 9.08318 1.95818C9.85677 1.1846 10.906 0.75 12 0.75C13.094 0.75 14.1432 1.1846 14.9168 1.95818C15.6904 2.73177 16.125 3.78098 16.125 4.875V8.25C16.125 8.66421 15.7892 9 15.375 9C14.9608 9 14.625 8.66421 14.625 8.25V4.875C14.625 4.17881 14.3484 3.51113 13.8562 3.01884C13.3639 2.52656 12.6962 2.25 12 2.25Z" fill="#2255EA"/>
 				</svg>
-					<input width="100%" type="password" id="pass" name="password" minlength="8" placeholder="Пароль" required />
+					<input class="input_password" width="100%" type="password" id="pass" name="password" minlength="8" placeholder="Пароль" onkeyup="check();" required/>
 					<span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
 				</div>
-				<a class="linc--help" href="#" onclick="openHelp()">Забыли пароль?</a>
+				<a class="linc--help" href="#">Забыли пароль?</a>
 				<div class="help" hidden>
 					<div class="help--massage">
 						<div class="help--massage--container">
@@ -80,7 +80,7 @@
 								<path d="M11.8125 9C12.4338 9 12.9375 8.49632 12.9375 7.875C12.9375 7.25368 12.4338 6.75 11.8125 6.75C11.1912 6.75 10.6875 7.25368 10.6875 7.875C10.6875 8.49632 11.1912 9 11.8125 9Z" fill="#2255EA"/>
 							</svg>
 							<p>Просьба обратиться к администратору, отправив запрос на адрес <a href="#">support@company.ru</a></p>
-							<button class="help--massage--close" onclick="closeHelp(event)">
+							<button class="help--massage--close" >
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#999999"/>
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#999999"/>
