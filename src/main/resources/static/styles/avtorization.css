@@ -60,24 +60,23 @@
     width: 384px;
     height: 40px;
     border: none;
-    margin-bottom: 20px;
-    background-color:#FFFFFF;
+    margin-bottom: 28px;
 }
 
 .container_input svg {
-    margin-left: 16px;
+    z-index: 10;
+    margin-left: 12px;
 }
 
 .container_input input {
     box-sizing: border-box;
-    margin-left: -42px;
+    margin-left: -34px;
     border-radius: 4px;
-    padding: 8px 46px;
+    padding: 8px 40px;
     width: 101%;
     height: 100%;
     border: 1px solid #C5C5C7;
-    background-image:none;
-    background-color:transparent;
+    background-color:#FFFFFF;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -87,8 +86,7 @@
     margin-top: 152px;
     height: 48px;
     border-radius: 6px;
-    background-color: rgb(34, 85, 234);
-    opacity: 40%;
+    background-color: #2255EA;
     border: none;
     color: white;
 }
@@ -99,6 +97,11 @@
 
 .container_input input:focus-visible {
     outline: 1px solid rgb(34, 85, 234);
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: insert 0 0 0 50px white;
+    -webkit-text-fill-color: black;
 }
 
 
@@ -176,4 +179,27 @@
     margin-top: 238px;
     margin-bottom: -76px;
     border-radius: 88px / 140px;
+}
+
+a {
+    text-decoration: none;
+    color: #1BAEFF;
+}
+
+.invalid_Value_email, .invalid_Value_password, .invalid_Value {
+    position: absolute;
+    margin-top: 82px;
+    margin-left: 2px;
+    color: #FB1F47;
+}
+
+.password_btn {
+    z-index: 10;
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 349px;
+}
+
+.password_btn:hover {
+    cursor: pointer;
 }
