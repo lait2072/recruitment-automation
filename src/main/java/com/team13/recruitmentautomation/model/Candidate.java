@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
 
+import java.util.List;
+
 @Entity
 @Table(name = "candidate")
 public class Candidate {
@@ -25,12 +27,15 @@ public class Candidate {
 
     @Size(min = 2, max = 100, message = "Имя файла резюме должно быть не меньше 2 символов")
     @NotEmpty(message = "Поле имя файла резюме дожно быть заполнено")
-    @Column(name = "fileName", nullable = false)
+    @Column(name = "fileNameResume", nullable = false)
     private String fileNameResume;
 
     @ManyToOne
     @JoinColumn(name = "status_id", referencedColumnName = "id")
     private Status statusCandidate;
+
+    @OneToMany(mappedBy = "nameCandidate")
+    private List<VacancyCandidate> jobSources;
 
     public Candidate() {
     }
@@ -64,6 +69,14 @@ public class Candidate {
         this.lastname = lastname;
     }
 
+    public String getFileNameResume() {
+        return fileNameResume;
+    }
+
+    public void setFileNameResume(String fileNameResume) {
+        this.fileNameResume = fileNameResume;
+    }
+
     public Status getStatusCandidate() {
         return statusCandidate;
     }
@@ -72,12 +85,12 @@ public class Candidate {
         this.statusCandidate = statusCandidate;
     }
 
-    public String getFileNameResume() {
-        return fileNameResume;
+    public List<VacancyCandidate> getJobSources() {
+        return jobSources;
     }
 
-    public void setFileNameResume(String fileNameResume) {
-        this.fileNameResume = fileNameResume;
+    public void setJobSources(List<VacancyCandidate> jobSources) {
+        this.jobSources = jobSources;
     }
 
     @Override
@@ -88,6 +101,7 @@ public class Candidate {
                 ", lastname='" + lastname + '\'' +
                 ", fileNameResume='" + fileNameResume + '\'' +
                 ", statusCandidate=" + statusCandidate +
+                ", jobSources=" + jobSources +
                 '}';
     }
 }

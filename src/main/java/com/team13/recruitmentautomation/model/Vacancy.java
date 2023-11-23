@@ -23,9 +23,6 @@ public class Vacancy {
     @Column(name = "numberDeclaration", nullable = false)
     private long numberDeclaration;
 
-    @Column(name = "urlSources", nullable = false)
-    private String urlSources;
-
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
     private Client nameClient;
@@ -37,13 +34,15 @@ public class Vacancy {
     @OneToMany(mappedBy = "jobVacancy")
     private List<Respond> responds;
 
+    @OneToMany(mappedBy = "nameVacancy")
+    private List<VacancyCandidate> jobSources;
+
     public Vacancy() {
     }
 
     public Vacancy(String nameVacancy, long numberDeclaration, String urlSources) {
         this.nameVacancy = nameVacancy;
         this.numberDeclaration = numberDeclaration;
-        this.urlSources = urlSources;
     }
 
     public long getId() {
@@ -70,14 +69,6 @@ public class Vacancy {
         this.numberDeclaration = numberDeclaration;
     }
 
-    public String getUrlSources() {
-        return urlSources;
-    }
-
-    public void setUrlSources(String urlSources) {
-        this.urlSources = urlSources;
-    }
-
     public Client getNameClient() {
         return nameClient;
     }
@@ -102,16 +93,24 @@ public class Vacancy {
         this.responds = responds;
     }
 
+    public List<VacancyCandidate> getJobSources() {
+        return jobSources;
+    }
+
+    public void setJobSources(List<VacancyCandidate> jobSources) {
+        this.jobSources = jobSources;
+    }
+
     @Override
     public String toString() {
         return "Vacancy{" +
                 "id=" + id +
                 ", nameVacancy='" + nameVacancy + '\'' +
                 ", numberDeclaration=" + numberDeclaration +
-                ", urlSources='" + urlSources + '\'' +
                 ", nameClient=" + nameClient +
                 ", newStatus=" + newStatus +
                 ", responds=" + responds +
+                ", jobSources=" + jobSources +
                 '}';
     }
 }
