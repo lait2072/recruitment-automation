@@ -1,0 +1,17 @@
+body {
+    display: flex;
+}
+
+.content_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+}
+
+.filter {
+    width: 240px;
+    height: 100vh;
+    overflow-x: scroll;
+}

@@ -1,0 +1,21 @@
+.header{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.name_page {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: -0.005em;
+    text-align: center;
+    margin-right: 32px;
+}
+
+.form--header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+}
