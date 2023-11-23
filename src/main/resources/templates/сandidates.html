@@ -114,9 +114,11 @@
     <div class="content_page">
         <header class="header">
             <h1 class="name_page">Кандидаты</h1>
-            <form class="form--header">
-                <button></button>
-                <select>
+            <div class="container_form">
+                <button class="header--button button_style">
+                    <img src="../static/images/filter.svg" alt="Воронка">
+                </button>
+                <select class="header--select">
                     <option value="">Все статусы</option>
                     <option value="dog">Тестирование</option>
                     <option value="cat">Интервью</option>
@@ -125,7 +127,7 @@
                     <option value="spider">Отказ кандидата</option>
                     <option value="goldfish">Отказ</option>
                   </select>
-                  <select>
+                  <select class="header--select" disabled>
                     <option value="">Все вакансии</option>
                     <option value="cat">Тестировщик</option>
                     <option value="hamster">Сапожник</option>
@@ -133,20 +135,59 @@
                     <option value="spider">Бэкенд-разработчик</option>
                     <option value="goldfish">Фронтенд-разработчик</option>
                   </select>
-                  <div class="search">
-                    <input type="text" placeholder="Поиск">
-                    <button class="button_search"></button>
-                  </div>
-            </form>
-            <ul>
-                <button></button>
-                <button></button>
-                <button></button>
-            </ul>
+                  <form class="search">
+                    <input class="search-input" type="text" placeholder="Поиск" disabled>
+                    <button class="search-button" disabled>
+                        <img src="../static/images/search.svg" alt="Лупа">
+                    </button>
+                  </form>
+                </div>
+            <div class="header--buttons">
+                <button class="header--button button_style">
+                    <img src="../static/images/sorting.svg" alt="Лупа">
+                </button>
+                <button class="header--button button_style">
+                    <img src="../static/images/upload.svg" alt="Лупа">
+                </button>
+                <button class="header--button button_add_style">
+                    <img src="../static/images/add.svg" alt="Лупа">
+                </button>
+            </div>
         </header>
         <main class="main">
             
         </main>
+        <footer class="footer">
+            <div class="footer-info">
+                <p>Всего записей: 700</p>
+                <img src="../static/images/line_vertical.svg">
+                <div class="count-items">
+                    <p>На странице:</p>
+                    <select class="footer--select">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                    </select>
+                </div>
+                
+            </div>
+            <div class="footer-buttons">
+                <div class="number_page">
+                    <p>1</p>
+                </div>
+                <p>из 100 страниц</p>
+                <button class="number_page down">
+                    <img src="../static/images/down.svg" alt="Назад">
+                </button>
+                <button class="number_page up">
+                    <img src="../static/images/down.svg" alt="Вперед">
+                </button>
+            </div>
+        </footer>
     </div>
     
 </body>
