@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../static/styles/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="../static/styles/header_authorized.css" rel="stylesheet" type="text/css" />
-    <link href="../static/styles/footer_authorized.css" rel="stylesheet" type="text/css" />
-    <link href="../static/styles/nav_bar.css" rel="stylesheet" type="text/css" />
-    <link href="../static/styles/candidates.css" rel="stylesheet" type="text/css" />
-    <link href="../static/styles/default_position.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/header_authorized.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/footer_authorized.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/nav_bar.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/candidates.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/default_position.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/selection_window.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/table.css" rel="stylesheet" type="text/css" />
     <title>Кандидаты</title>
 </head>
 <body>
     <nav class="nav_bar">
         <a class="lleter_logo" href="#">
-            <img src="../static/images/lletter_logo.png">
+            <img src="../../static/images/lletter_logo.png">
         </a>
         <ul class="nav_bar-list list_container_one">
             <li class="nav_bar-list--item nav_bar-list--item-active">
@@ -72,7 +74,7 @@
                 </a>
             </li>
         </ul>
-        <img src="../static/images/line.svg" alt="Линия">
+        <img src="../../static/images/line.svg" alt="Линия">
         <ul class="nav_bar-list two list_container_two">
             <li class="nav_bar-list--item">
                 <a href="#">
@@ -116,7 +118,7 @@
             <h1 class="name_page">Кандидаты</h1>
             <div class="container_form">
                 <button class="header--button button_style">
-                    <img src="../static/images/filter.svg" alt="Воронка">
+                    <img src="../../static/images/filter.svg" alt="Воронка">
                 </button>
                 <select class="header--select">
                     <option value="">Все статусы</option>
@@ -138,29 +140,47 @@
                   <form class="search">
                     <input class="search-input" type="text" placeholder="Поиск" disabled>
                     <button class="search-button" disabled>
-                        <img src="../static/images/search.svg" alt="Лупа">
+                        <img src="../../static/images/search.svg" alt="Лупа">
                     </button>
                   </form>
                 </div>
             <div class="header--buttons">
                 <button class="header--button button_style">
-                    <img src="../static/images/sorting.svg" alt="Лупа">
+                    <img src="../../static/images/sorting.svg" alt="Лупа">
                 </button>
                 <button class="header--button button_style">
-                    <img src="../static/images/upload.svg" alt="Лупа">
+                    <img src="../../static/images/upload.svg" alt="Лупа">
                 </button>
                 <button class="header--button button_add_style">
-                    <img src="../static/images/add.svg" alt="Лупа">
+                    <img src="../../static/images/add.svg" alt="Лупа">
                 </button>
             </div>
         </header>
         <main class="main">
-            
+            <div class="selection_window">
+                <div class="selection_count display_none">
+                    <button class="selection_clear">X Сбросить</button>
+                    <p>Выбрано 3</p>
+                </div>
+                <div class="selection_count--buttons display_none">
+                    <button class="selection_button">Отправить письмо</button>
+                    <button class="selection_button">Добавить статусы</button>
+                    <button class="selection_button">Отправить резюме</button>
+                </div>
+            </div>
+            <table>
+                <tr class="table_header">
+                    <th>check</th><th>Имя</th><th>Статус</th><th>Контакты</th><th>Ответственный</th><th>Вакансии</th><th>Комментарии</th>
+                </tr> 
+                <tr>
+                    <td>данные</td><td>данные</td>
+                </tr> 
+            </table>
         </main>
         <footer class="footer">
             <div class="footer-info">
                 <p>Всего записей: 700</p>
-                <img src="../static/images/line_vertical.svg">
+                <img src="../../static/images/line_vertical.svg">
                 <div class="count-items">
                     <p>На странице:</p>
                     <select class="footer--select">
@@ -181,14 +201,13 @@
                 </div>
                 <p>из 100 страниц</p>
                 <button class="number_page down">
-                    <img src="../static/images/down.svg" alt="Назад">
+                    <img src="../../static/images/down.svg" alt="Назад">
                 </button>
                 <button class="number_page up">
-                    <img src="../static/images/down.svg" alt="Вперед">
+                    <img src="../../static/images/down.svg" alt="Вперед">
                 </button>
             </div>
         </footer>
     </div>
-    
 </body>
 </html>
