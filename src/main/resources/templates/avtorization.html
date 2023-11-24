@@ -56,7 +56,7 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 5.25C2.25 4.83579 2.58579 4.5 3 4.5H21C21.4142 4.5 21.75 4.83579 21.75 5.25V18C21.75 18.3978 21.592 18.7794 21.3107 19.0607C21.0294 19.342 20.6478 19.5 20.25 19.5H3.75C3.35218 19.5 2.97065 19.342 2.68934 19.0607C2.40804 18.7794 2.25 18.3978 2.25 18V5.25ZM3.75 6V18H20.25V6H3.75Z"/>
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.44714 4.74321C2.72703 4.43787 3.20146 4.41724 3.5068 4.69714L12 12.4826L20.4932 4.69714C20.7985 4.41724 21.273 4.43787 21.5529 4.74321C21.8328 5.04855 21.8121 5.52298 21.5068 5.80287L12.5068 14.0529C12.2201 14.3157 11.78 14.3157 11.4932 14.0529L2.49321 5.80287C2.18787 5.52298 2.16724 5.04855 2.44714 4.74321Z"/>
 					</svg>
-					<input onfocusout="focusoutInput(this)" onclick="focusInput(this)" class="input_email" width="100%" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта" size="30" onkeyup="check();" required />
+					<input onfocusout="focusoutInput(this)" name="username" onclick="focusInput(this)" class="input_email" width="100%" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта" size="30" onkeyup="check();" required />
 					<p class="invalid_Value_email" hidden>Недопустимый адрес электронной почты</p>
 				</div>
 				<div class="container_input">
@@ -65,7 +65,7 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C11.3038 2.25 10.6361 2.52656 10.1438 3.01884C9.65156 3.51113 9.375 4.17881 9.375 4.875V8.25C9.375 8.66421 9.03921 9 8.625 9C8.21079 9 7.875 8.66421 7.875 8.25V4.875C7.875 3.78098 8.3096 2.73177 9.08318 1.95818C9.85677 1.1846 10.906 0.75 12 0.75C13.094 0.75 14.1432 1.1846 14.9168 1.95818C15.6904 2.73177 16.125 3.78098 16.125 4.875C16.125 5.28921 15.7892 5.625 15.375 5.625C14.9608 5.625 14.625 5.28921 14.625 4.875C14.625 4.17881 14.3484 3.51113 13.8562 3.01884C13.3639 2.52656 12.6962 2.25 12 2.25Z"/>
 						<path d="M12 15.375C12.6213 15.375 13.125 14.8713 13.125 14.25C13.125 13.6287 12.6213 13.125 12 13.125C11.3787 13.125 10.875 13.6287 10.875 14.25C10.875 14.8713 11.3787 15.375 12 15.375Z"/>
 					</svg>	
-					<input onfocusout="focusoutInput(this)" onclick="focusInput(this)" class="input_password" width="100%" type="password" id="pass" name="password" minlength="6" placeholder="Пароль" onkeyup="check();" required/>
+					<input onfocusout="focusoutInput(this)" name="password" onclick="focusInput(this)" class="input_password" width="100%" type="password" id="pass" name="password" minlength="6" placeholder="Пароль" onkeyup="check();" required/>
 					<div class="password_btn"><img src="../static/images/EyeClosed.png" alt=""></div>
 					<p class="invalid_Value_password" hidden>Необходимо использовать только цифры латинские буквы</p>
 					<p class="invalid_Value" hidden>Неверный email или пароль</p>
