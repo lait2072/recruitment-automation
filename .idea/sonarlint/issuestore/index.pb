@@ -1,0 +1,17 @@
+
+y
+Isrc/main/java/com/team13/recruitmentautomation/config/SecurityConfig.java,f/5/f5e5582e48939fe45e67fdf7f0c69c662af898f0
+}
+Msrc/main/java/com/team13/recruitmentautomation/controller/MainController.java,f/b/fbc3f2372ca464969cb44a4631f13f7fc7460c2f
+n
+>src/main/java/com/team13/recruitmentautomation/model/Role.java,7/e/7eaa5b55e2384ed0fc0d1651d565d8a6f29c3fe6
+n
+>src/main/java/com/team13/recruitmentautomation/model/User.java,a/8/a8d8e6cc838c71c25d07197c64bc1c1a0e41afed
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+}
+Msrc/main/java/com/team13/recruitmentautomation/repository/UserRepository.java,3/b/3b1254467814e4baa154e1054844157c96e08467
+w
+Gsrc/main/java/com/team13/recruitmentautomation/service/UserService.java,0/2/0278c0de561a43f3c016ccbbfcc564789532df83
+„
+Tsrc/main/java/com/team13/recruitmentautomation/RecruitmentAutomationApplication.java,0/d/0d705c9a03d2800feee3d386f7065dbfda37e77f
