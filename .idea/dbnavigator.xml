@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="true" />
+    <value-preview-pinned value="false" />
+  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
@@ -8,11 +13,34 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="aa8dfa09-4abf-4106-8582-3e442b401f77">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[UPDATE users
+SET username = 'recruiter@glazgo.ru'
+WHERE id = 1;
+
+UPDATE users
+SET username = 'admin-recruiter@glazgo.ru'
+WHERE id = 2;
+
+UPDATE users
+SET username = 'customer@glazgo.ru'
+WHERE id = 3;
+
+UPDATE users
+SET username = 'recruiter-manager@glazgo.ru'
+WHERE id = 4;]]></console>
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="aa8dfa09-4abf-4106-8582-3e442b401f77" dataset="public.users" active-filter-id="" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
