@@ -7,7 +7,6 @@
     <link href="../../static/styles/header_authorized.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/footer_authorized.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/nav_bar.css" rel="stylesheet" type="text/css" />
-    <link href="../../static/styles/candidates.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/default_position.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/selection_window.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/table.css" rel="stylesheet" type="text/css" />
@@ -110,24 +109,24 @@
             </li>
         </ul>
     </nav>
-    <div class="filter" hidden>
+    <div class="filter display_none">
 
     </div>
     <div class="content_page">
         <header class="header">
             <h1 class="name_page">Кандидаты</h1>
             <div class="container_form">
-                <button class="header--button button_style">
+                <button onclick="eventFilter()" value="filter" class="header--button button_style">
                     <img src="../../static/images/filter.svg" alt="Воронка">
                 </button>
-                <select class="header--select">
+                <select onchange="eventSelect(this)" class="header--select">
                     <option value="">Все статусы</option>
-                    <option value="dog">Тестирование</option>
-                    <option value="cat">Интервью</option>
-                    <option value="hamster">Интервью прошла</option>
-                    <option value="parrot">Принят на работу</option>
-                    <option value="spider">Отказ кандидата</option>
-                    <option value="goldfish">Отказ</option>
+                    <option value="test">Тестирование</option>
+                    <option value="intervie">Интервью</option>
+                    <option value="end_interview">Интервью прошла</option>
+                    <option value="accepted_on_the_bot">Принят на работу</option>
+                    <option value="candidates_refusal">Отказ кандидата</option>
+                    <option value="refusal">Отказ</option>
                   </select>
                   <select class="header--select" disabled>
                     <option value="">Все вакансии</option>
@@ -159,8 +158,8 @@
         <main class="main">
             <div class="selection_window">
                 <div class="selection_count display_none">
-                    <button class="selection_clear">X Сбросить</button>
-                    <p>Выбрано 3</p>
+                    <button onclick="openElement(this)" value="clear" class="selection_clear">X Сбросить</button>
+                    <p>Выбрано <span class="countCheckt">3</span></p>
                 </div>
                 <div class="selection_count--buttons display_none">
                     <button class="selection_button">Отправить письмо</button>
@@ -168,14 +167,276 @@
                     <button class="selection_button">Отправить резюме</button>
                 </div>
             </div>
-            <table>
-                <tr class="table_header">
-                    <th>check</th><th>Имя</th><th>Статус</th><th>Контакты</th><th>Ответственный</th><th>Вакансии</th><th>Комментарии</th>
-                </tr> 
-                <tr>
-                    <td>данные</td><td>данные</td>
-                </tr> 
-            </table>
+            <div class="container_table">
+                <table>
+                    <tbody>
+                        <tr class="table_header">
+                            <th class="table_input">
+                                <input onclick="openElement(this)" value="all" class="all" type="checkbox"/>
+                            </th>
+                            <th>
+                                <span>Имя</span>
+                            </th>
+                            <th>
+                                <svg width="1" height="20" viewBox="0 0 1 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.36386e-08 20L1.07288e-06 -3.64203e-08L1 0L0.999999 20L2.36386e-08 20Z" fill="#D6D8DD"/>
+                                </svg>
+                                <span>Статус</span>
+                            </th>
+                            <th>
+                                <svg width="1" height="20" viewBox="0 0 1 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.36386e-08 20L1.07288e-06 -3.64203e-08L1 0L0.999999 20L2.36386e-08 20Z" fill="#D6D8DD"/>
+                                </svg>
+                                <span>Контакты</span>
+                            </th>
+                            <th>
+                                <svg width="1" height="20" viewBox="0 0 1 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.36386e-08 20L1.07288e-06 -3.64203e-08L1 0L0.999999 20L2.36386e-08 20Z" fill="#D6D8DD"/>
+                                </svg>
+                                <span>Ответственный</span>
+                            </th>
+                            <th>
+                                <svg width="1" height="20" viewBox="0 0 1 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.36386e-08 20L1.07288e-06 -3.64203e-08L1 0L0.999999 20L2.36386e-08 20Z" fill="#D6D8DD"/>
+                                </svg>
+                                <span>Вакансии</span>
+                                
+                            </th>
+                            <th>
+                                <svg width="1" height="20" viewBox="0 0 1 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.36386e-08 20L1.07288e-06 -3.64203e-08L1 0L0.999999 20L2.36386e-08 20Z" fill="#D6D8DD"/>
+                                </svg>
+                                <span>Комментарии</span>
+                            </th>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate test">
+                                    <option selected="selected" value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate intervie">
+                                    <option value="test">Тестирование</option>
+                                    <option selected="selected" value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate end_interview">
+                                    <option value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option selected="selected" value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate accepted_on_the_bot">
+                                    <option value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option selected="selected" value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate candidates_refusal">
+                                    <option value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option selected="selected" value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate refusal">
+                                    <option value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option selected="selected" value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr>
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate test">
+                                    <option selected="selected" value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate test">
+                                    <option selected="selected" value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                        <tr>
+                            <td class="table_input"><input onclick="openElement(this)" value="on" class="chekbox" type="checkbox"/></td>
+                            <td>
+                                <h2>Алексей Сидоров</h2>
+                                <p class="sity">Москва</p>
+                            </td>
+                            <td>
+                                <select onchange="eventSelect(this)" class="status-candidate test">
+                                    <option selected="selected" value="test">Тестирование</option>
+                                    <option value="intervie">Интервью</option>
+                                    <option value="end_interview">Интервью прошла</option>
+                                    <option value="accepted_on_the_bot">Принят на работу</option>
+                                    <option value="candidates_refusal">Отказ кандидата</option>
+                                    <option value="refusal">Отказ</option>
+                                </select>
+                                <p>12.11.2023</p>
+                            </td>
+                            <td>
+                                <a class="table-numer" href="tel:+79991112233">+7 (926) 111-70-60</a> 
+                                <p><a class="table-email" href="mailto:sid25@mail.ru">sid25@mail.ru</a></p>
+                            </td>
+                            <td>Игнатов С. И.</td>
+                            <td>Менеджер продукта</td>
+                            <td>Отправлен тест</td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer-info">
@@ -196,18 +457,19 @@
                 
             </div>
             <div class="footer-buttons">
-                <div class="number_page">
-                    <p>1</p>
+                <div>
+                    <input class="number_page" type="text" value="1">
                 </div>
                 <p>из 100 страниц</p>
-                <button class="number_page down">
+                <button onclick="changePage(this)" class="number_page down">
                     <img src="../../static/images/down.svg" alt="Назад">
                 </button>
-                <button class="number_page up">
+                <button onclick="changePage(this)" class="number_page up">
                     <img src="../../static/images/down.svg" alt="Вперед">
                 </button>
             </div>
         </footer>
     </div>
+    <script src="../../static/scripts/сandidates.js"></script>
 </body>
 </html>

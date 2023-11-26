@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="../static/styles/normalize.css" rel="stylesheet" type="text/css" />
-	<link href="../static/styles/avtorization.css" rel="stylesheet" type="text/css" />
+	<link href="https://vk.com/doc346178348_673850423?hash=CqSr4zJcDTDFqk2189LQmODpvofrlMoDehQOyUtBxo8&dl=eD1Dnf2cimLsZoeHht8kS2MIjZwgkzdlZMRqmSkHBUc" rel="stylesheet" type="text/css" />
+	<link href="https://vk.com/doc346178348_673850724?hash=1P1IBT9Ym3u9lZmYTWYTK7ZVZ4HHuRacZzkPgL4FJt8&dl=3mPIZzh3DeYCtT3weTRrilvVp3xKb44SvWWPndnatmw" rel="stylesheet" type="text/css" />
 	<title>Авторизация</title>
 </head>
 <body>
-	<script src="../static/scripts/avtorization.js" defer></script>
 	<div class="avtrization">
 		<div class="glazgo">		  
 			<div class="language">
@@ -49,14 +48,14 @@
 			<div class="masccot">Маскот?</div>
 		</div>
 		<div class="form">
-			<form class="form_avtorization">
+			<form class="form_avtorization" th:action="@{/login}" method="post">
 				<h2>Авторизация</h2>
 				<div class="container_input">
 					<svg class="svg_email" width="24" height="24" viewBox="0 0 24 24" fill="#808080" xmlns="http://www.w3.org/2000/svg">
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.25 5.25C2.25 4.83579 2.58579 4.5 3 4.5H21C21.4142 4.5 21.75 4.83579 21.75 5.25V18C21.75 18.3978 21.592 18.7794 21.3107 19.0607C21.0294 19.342 20.6478 19.5 20.25 19.5H3.75C3.35218 19.5 2.97065 19.342 2.68934 19.0607C2.40804 18.7794 2.25 18.3978 2.25 18V5.25ZM3.75 6V18H20.25V6H3.75Z"/>
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M2.44714 4.74321C2.72703 4.43787 3.20146 4.41724 3.5068 4.69714L12 12.4826L20.4932 4.69714C20.7985 4.41724 21.273 4.43787 21.5529 4.74321C21.8328 5.04855 21.8121 5.52298 21.5068 5.80287L12.5068 14.0529C12.2201 14.3157 11.78 14.3157 11.4932 14.0529L2.49321 5.80287C2.18787 5.52298 2.16724 5.04855 2.44714 4.74321Z"/>
 					</svg>
-					<input onfocusout="focusoutInput(this)" name="username" onclick="focusInput(this)" class="input_email" width="100%" type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Электронная почта" size="30" onkeyup="check();" required />
+					<input type="text" name="username" onfocusout="focusoutInput(this)" onclick="focusInput(this)" class="input_email" width="100%" placeholder="Электронная почта" size="30" onkeyup="check();" required />
 					<p class="invalid_Value_email" hidden>Недопустимый адрес электронной почты</p>
 				</div>
 				<div class="container_input">
@@ -65,34 +64,138 @@
 						<path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C11.3038 2.25 10.6361 2.52656 10.1438 3.01884C9.65156 3.51113 9.375 4.17881 9.375 4.875V8.25C9.375 8.66421 9.03921 9 8.625 9C8.21079 9 7.875 8.66421 7.875 8.25V4.875C7.875 3.78098 8.3096 2.73177 9.08318 1.95818C9.85677 1.1846 10.906 0.75 12 0.75C13.094 0.75 14.1432 1.1846 14.9168 1.95818C15.6904 2.73177 16.125 3.78098 16.125 4.875C16.125 5.28921 15.7892 5.625 15.375 5.625C14.9608 5.625 14.625 5.28921 14.625 4.875C14.625 4.17881 14.3484 3.51113 13.8562 3.01884C13.3639 2.52656 12.6962 2.25 12 2.25Z"/>
 						<path d="M12 15.375C12.6213 15.375 13.125 14.8713 13.125 14.25C13.125 13.6287 12.6213 13.125 12 13.125C11.3787 13.125 10.875 13.6287 10.875 14.25C10.875 14.8713 11.3787 15.375 12 15.375Z"/>
 					</svg>	
-					<input onfocusout="focusoutInput(this)" name="password" onclick="focusInput(this)" class="input_password" width="100%" type="password" id="pass" name="password" minlength="6" placeholder="Пароль" onkeyup="check();" required/>
-					<div class="password_btn"><img src="../static/images/EyeClosed.png" alt=""></div>
+					<input type="password" name="password" onfocusout="focusoutInput(this)" onclick="focusInput(this)" class="input_password" width="100%" minlength="6" placeholder="Пароль" onkeyup="check();" required/>
+					<div class="password_btn"><img src="https://sun9-53.userapi.com/impg/535936DtCE1KvfUFuIC-5GBp8ofwEz2CY7xuCQ/JjYR1enY8ac.jpg?size=24x24&quality=96&sign=e8a8608d309ad799429bf83a4e8082cc&type=album" alt=""></div>
 					<p class="invalid_Value_password" hidden>Необходимо использовать только цифры латинские буквы</p>
 					<p class="invalid_Value" hidden>Неверный email или пароль</p>
 				</div>
 				<a class="linc--help" href="#">Забыли пароль?</a>
-				<div class="help" hidden>
-					<div class="help--massage">
-						<div class="help--massage--container">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25C16.5563 20.25 20.25 16.5563 20.25 12C20.25 7.44365 16.5563 3.75 12 3.75ZM2.25 12C2.25 6.61522 6.61522 2.25 12 2.25C17.3848 2.25 21.75 6.61522 21.75 12C21.75 17.3848 17.3848 21.75 12 21.75C6.61522 21.75 2.25 17.3848 2.25 12Z" fill="#2255EA"/>
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 11.25C10.5 10.8358 10.8358 10.5 11.25 10.5H12C12.4142 10.5 12.75 10.8358 12.75 11.25V15.75C13.1642 15.75 13.5 16.0858 13.5 16.5C13.5 16.9142 13.1642 17.25 12.75 17.25H12C11.5858 17.25 11.25 16.9142 11.25 16.5V12C10.8358 12 10.5 11.6642 10.5 11.25Z" fill="#2255EA"/>
-								<path d="M11.8125 9C12.4338 9 12.9375 8.49632 12.9375 7.875C12.9375 7.25368 12.4338 6.75 11.8125 6.75C11.1912 6.75 10.6875 7.25368 10.6875 7.875C10.6875 8.49632 11.1912 9 11.8125 9Z" fill="#2255EA"/>
-							</svg>
-							<p>Просьба обратиться к администратору, отправив запрос на адрес <a class="email_link" href="mailto:support@company.ru">support@company.ru</a></p>
-							<button class="help--massage--close" >
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#999999"/>
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#999999"/>
-								</svg>
-							</button>
-						</div>
-					</div>
-				</div>
 				<button class="container_input_button" type="submit" name="submit_button" value="main_button" disabled>Войти</button>
 			</form>
+			<div class="help" hidden>
+				<div class="help--massage">
+					<div class="help--massage--container">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.75C7.44365 3.75 3.75 7.44365 3.75 12C3.75 16.5563 7.44365 20.25 12 20.25C16.5563 20.25 20.25 16.5563 20.25 12C20.25 7.44365 16.5563 3.75 12 3.75ZM2.25 12C2.25 6.61522 6.61522 2.25 12 2.25C17.3848 2.25 21.75 6.61522 21.75 12C21.75 17.3848 17.3848 21.75 12 21.75C6.61522 21.75 2.25 17.3848 2.25 12Z" fill="#2255EA"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 11.25C10.5 10.8358 10.8358 10.5 11.25 10.5H12C12.4142 10.5 12.75 10.8358 12.75 11.25V15.75C13.1642 15.75 13.5 16.0858 13.5 16.5C13.5 16.9142 13.1642 17.25 12.75 17.25H12C11.5858 17.25 11.25 16.9142 11.25 16.5V12C10.8358 12 10.5 11.6642 10.5 11.25Z" fill="#2255EA"/>
+							<path d="M11.8125 9C12.4338 9 12.9375 8.49632 12.9375 7.875C12.9375 7.25368 12.4338 6.75 11.8125 6.75C11.1912 6.75 10.6875 7.25368 10.6875 7.875C10.6875 8.49632 11.1912 9 11.8125 9Z" fill="#2255EA"/>
+						</svg>
+						<p>Просьба обратиться к администратору, отправив запрос на адрес <a class="email_link" href="mailto:support@company.ru">support@company.ru</a></p>
+						<button class="help--massage--close" >
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289Z" fill="#999999"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#999999"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<p class="author">© 2023, GlazGo</p>
+	<script>
+		const help = document.querySelector('.linc--help');
+		const closes = document.querySelector('.help--massage--close');
+
+		function openHelp() {
+			const helpDiv = document.querySelector('.help');
+			helpDiv.removeAttribute('hidden')
+			console.log(form.submit)
+		}
+
+		function closeHelp(event) {
+			event.preventDefault();
+			const helpDiv = document.querySelector('.help');
+			helpDiv.setAttribute("hidden", "");
+		}
+
+		function check() {
+			var inp1 = document.querySelector('.input_email'),
+				inp2 = document.querySelector('.input_password')
+				let isValid = inp1.value.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ? true : false;
+				if (inp2.value.length >= 6 && isValid) {
+				document.querySelector('.container_input_button').disabled = inp1.value && inp2.value ? false : "disabled";
+			}
+		}
+
+		function focusInput(elem) {
+			let splits = elem.className.split('_');
+			let svg = document.querySelector(`.svg_${splits[1]}`)
+			svg.setAttribute("fill", "#2255EA")
+			elem.style.cssText += `
+						color: #000000;
+						border-color: #2255EA;
+					`;
+			const paragraphInvalid = document.querySelector(`.invalid_Value_${splits[1]}`)
+			console.log(paragraphInvalid)
+			paragraphInvalid.setAttribute('hidden', '')
+			
+			
+		}
+
+		function focusoutInput(elem) {
+			let classElem = elem.className.split('_')[1];
+			let elemValue = elem.value
+
+			function isInvalideValue() {
+				let svg = document.querySelector(`.svg_${classElem}`)
+					svg.setAttribute("fill", "#FB1F47");
+					elem.style.cssText += `
+						color: #FB1F47;
+						border-color: #FB1F47;
+					`;
+					const paragraphInvalid = document.querySelector(`.invalid_Value_${classElem}`)
+					paragraphInvalid.removeAttribute('hidden')
+					const btnForm = document.querySelector(".container_input_button")
+					btnForm.setAttribute('disabled', '')
+			}
+
+			function isValideValue() {
+				let svg = document.querySelector(`.svg_${classElem}`)
+					svg.setAttribute("fill", "#2255EA");
+					elem.style.cssText += `
+						color: #000000;
+						border-color: #2255EA;
+					`;
+					const paragraphInvalid = document.querySelector(`.invalid_Value_${classElem}`)
+					paragraphInvalid.setAttribute('hidden', '')
+			}
+			if(classElem === 'email') {
+				let isValideEmail = elemValue.toLowerCase().match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) ? true : false;
+				if(!isValideEmail) {
+					isInvalideValue();
+				} else {
+					isValideValue()
+				}
+			
+			} else {
+				let isValidePassword = elemValue.toLowerCase().match(/^[a-zA-Z0-9]+$/) ? true : false;
+				console.log(isValidePassword)
+				if(!isValidePassword) {
+					isInvalideValue();
+				}
+			}
+		}
+
+		function showPassword() {
+			const btn = document.querySelector('.password_btn')
+			const input = document.querySelector('.input_password')
+
+			btn.addEventListener('click', () => {
+				if(input.getAttribute('type') === 'password') {
+					input.setAttribute('type', 'text')
+					btn.childNodes[0].setAttribute('src', 'https://sun9-79.userapi.com/impg/HkuXyt5S6dXLMyBvMYC7r5jFK0Lrp9mJ7MbTHA/8udb-vDeaW4.jpg?size=24x24&quality=96&sign=5a087f3e4327e46b230431b9cb15729a&type=album')
+				} else {
+					input.setAttribute('type', 'password')
+					btn.childNodes[0].setAttribute('src', 'https://sun9-53.userapi.com/impg/535936DtCE1KvfUFuIC-5GBp8ofwEz2CY7xuCQ/JjYR1enY8ac.jpg?size=24x24&quality=96&sign=e8a8608d309ad799429bf83a4e8082cc&type=album')
+				}
+			})
+		}
+
+		showPassword()
+
+		help.addEventListener("click", openHelp);
+		closes.addEventListener("click", closeHelp);
+	</script>
 </body>
 </html>

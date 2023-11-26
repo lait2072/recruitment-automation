@@ -50,6 +50,8 @@ function focusoutInput(elem) {
 		  	`;
 			const paragraphInvalid = document.querySelector(`.invalid_Value_${classElem}`)
 			paragraphInvalid.removeAttribute('hidden')
+			const btnForm = document.querySelector(".container_input_button")
+			btnForm.setAttribute('disabled', '')
 	}
 
 	function isValideValue() {
