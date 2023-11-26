@@ -16,12 +16,8 @@ public class Vacancy {
     private long id;
 
     @NotEmpty(message = "Поле телефон дожно быть заполнено")
-    @Size(min = 6, max = 50)
     @Column(name = "nameVacancy", nullable = false)
     private String nameVacancy;
-
-    @Column(name = "numberDeclaration", nullable = false)
-    private long numberDeclaration;
 
     @ManyToOne
     @JoinColumn(name = "client_id", referencedColumnName = "id")
@@ -40,9 +36,8 @@ public class Vacancy {
     public Vacancy() {
     }
 
-    public Vacancy(String nameVacancy, long numberDeclaration, String urlSources) {
+    public Vacancy(String nameVacancy) {
         this.nameVacancy = nameVacancy;
-        this.numberDeclaration = numberDeclaration;
     }
 
     public long getId() {
@@ -59,14 +54,6 @@ public class Vacancy {
 
     public void setNameVacancy(String nameVacancy) {
         this.nameVacancy = nameVacancy;
-    }
-
-    public long getNumberDeclaration() {
-        return numberDeclaration;
-    }
-
-    public void setNumberDeclaration(long numberDeclaration) {
-        this.numberDeclaration = numberDeclaration;
     }
 
     public Client getNameClient() {
@@ -106,7 +93,6 @@ public class Vacancy {
         return "Vacancy{" +
                 "id=" + id +
                 ", nameVacancy='" + nameVacancy + '\'' +
-                ", numberDeclaration=" + numberDeclaration +
                 ", nameClient=" + nameClient +
                 ", newStatus=" + newStatus +
                 ", responds=" + responds +

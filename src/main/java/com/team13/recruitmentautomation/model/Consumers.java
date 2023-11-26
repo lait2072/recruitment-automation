@@ -15,27 +15,22 @@ public class Consumers {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min = 2, max = 30, message = "Имя должно быть не меньше 2 и не больше 30 символов")
     @NotEmpty(message = "Поле имя дожно быть заполнено")
     @Column(name = "firstname", nullable = false)
     private String firstname;
 
-    @Size(min = 2, max = 30, message = "Фамилия должно быть не меньше 2 и не больше 30 символов")
     @NotEmpty(message = "Поле фамилия дожно быть заполнено")
     @Column(name = "lastname", nullable = false)
     private String lastname;
 
-    @Size(min = 8, max = 10, message = "Логин должен быть не меньше 8 и не больше 10 символов")
     @NotEmpty(message = "Поле логин дожно быть заполнено")
     @Column(name = "login", nullable = false)
     private String login;
 
-    @Size(min = 6, max = 10, message = "Пароль должен быть не меньше 6 и не больше 10 символов")
     @NotEmpty(message = "Поле пароль дожно быть заполнено")
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Size(min = 8, max = 24)
     @Column(name = "role", nullable = false)
     @Enumerated(EnumType.STRING)
     private Role role;

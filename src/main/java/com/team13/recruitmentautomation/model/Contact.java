@@ -16,7 +16,6 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min = 11, max = 11, message = "Номер телефона содержит 11 символов")
     @Column(name = "telephone", nullable = false)
     @NotEmpty(message = "Поле телефон дожно быть заполнено")
     private String telephone;
@@ -26,7 +25,6 @@ public class Contact {
     @Email(message = "Email должен быть достоверный")
     private String email;
 
-    @Size(max = 30)
     @Column(name = "telegram")
     private String telegram;
 

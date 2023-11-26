@@ -14,7 +14,7 @@ public class Respond {
     private long id;
 
     @Column(name = "numberRespond")
-    private long numberRespond;
+    private String numberRespond;
 
     @ManyToOne
     @JoinColumn(name = "vacancy_id", referencedColumnName = "id")
@@ -23,7 +23,7 @@ public class Respond {
     public Respond() {
     }
 
-    public Respond(long numberRespond) {
+    public Respond(String numberRespond) {
         this.numberRespond = numberRespond;
     }
 
@@ -35,19 +35,19 @@ public class Respond {
         this.id = id;
     }
 
-    public long getNumberRespond() {
+    public String getNumberRespond() {
         return numberRespond;
     }
 
-    public void setNumberRespond(long numberRespond) {
+    public void setNumberRespond(String numberRespond) {
         this.numberRespond = numberRespond;
     }
 
-    public Vacancy getVacancy() {
+    public Vacancy getJobVacancy() {
         return jobVacancy;
     }
 
-    public void setVacancy(Vacancy jobVacancy) {
+    public void setJobVacancy(Vacancy jobVacancy) {
         this.jobVacancy = jobVacancy;
     }
 
@@ -55,7 +55,7 @@ public class Respond {
     public String toString() {
         return "Respond{" +
                 "id=" + id +
-                ", numberRespond=" + numberRespond +
+                ", numberRespond='" + numberRespond + '\'' +
                 ", jobVacancy=" + jobVacancy +
                 '}';
     }

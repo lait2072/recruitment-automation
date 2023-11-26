@@ -1,0 +1,10 @@
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-22-44', 'ivanov.ivan@mail.ru', '@IgorIgn');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 873-22-44', 'vasya@mail.ru', '@VasyaBuk');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-21-23', 'mariya@mail.ru', '@MariaPetr');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-22-34', 'katya@mail.ru', '@Katya');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-23-45', 'yura@mail.ru', '@Yura');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-24-56', 'victor@mail.ru', '@Biktor');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-25-67', 'vasya.rom@mail.ru', '@Basya');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-26-78', 'petr@mail.ru', '@PetrSido');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-27-89', 'olga@mail.ru', '@Olga');
+INSERT INTO contact (telephone, email, telegram) VALUES ('+7 (999) 233-20-98', 'valya@mail.ru', '@Vasya');

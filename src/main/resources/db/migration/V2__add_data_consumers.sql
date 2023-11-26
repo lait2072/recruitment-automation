@@ -1,0 +1,10 @@
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Игорь', 'Игнатов', 'Igor', 'Igor_Ignatov', 'RECRUITER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Василий', 'Бук', 'Buk', 'Vasya_buk', 'RECRUITER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Мария', 'Петрова', 'Maria', 'Maria_Petr', 'RECRUITER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Екатерина', 'Давыдова', 'Katya', 'Kata_80', 'ADMIN');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Юрий', 'Юров', 'Yura', 'Yura_55', 'RECRUITER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Виктор', 'Цой', 'Biktor', 'Biktor_77', 'CUSTOMER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Василий', 'Романенко', 'Basya', 'Basya_33', 'RECRUITER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Петр', 'Сидоров', 'Petr', 'Petr_Sido9', 'CUSTOMER_SUPERVISOR');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Ольга', 'Короткова', 'Olga', 'Olga)_kor', 'RECRUITER');
+INSERT INTO consumers (firstname, lastname, login, password, role) VALUES ('Валя', 'Иванова', 'Valya', 'Valya_55', 'CUSTOMER');

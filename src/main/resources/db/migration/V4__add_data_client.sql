@@ -1,0 +1,10 @@
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Петров', 'Кирил', 'СОГ');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Сидоров', 'Петр', 'АПР');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Иванов', 'Александр', 'КЕНТ');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Оленев', 'Евгений', 'СМИ');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Зайцев', 'Олег', 'ДЛА');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Соколов', 'Василий', 'ВАЕР');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Тимофеев', 'Алексей', 'ГАП');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Ланев', 'Михаил', 'МОРОЗ');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Коновалов', 'Кирил', 'ДЛО');
+INSERT INTO client (firstname, lastname, name_company) VALUES ('Сыромятов', 'Лев', 'ТРУК');

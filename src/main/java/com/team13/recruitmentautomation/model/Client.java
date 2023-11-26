@@ -15,12 +15,10 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Size(min = 2, max = 30, message = "Имя должно быть не меньше 2 и не больше 30 символов")
     @NotEmpty(message = "Поле имя дожно быть заполнено")
     @Column(nullable = false)
     private String firstname;
 
-    @Size(min = 2, max = 30, message = "Фамилия должно быть не меньше 2 и не больше 30 символов")
     @NotEmpty(message = "Поле фамилия дожно быть заполнено")
     @Column(name = "lastname")
     private String lastname;
