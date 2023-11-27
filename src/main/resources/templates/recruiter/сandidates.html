@@ -10,6 +10,7 @@
     <link href="../../static/styles/default_position.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/selection_window.css" rel="stylesheet" type="text/css" />
     <link href="../../static/styles/table.css" rel="stylesheet" type="text/css" />
+    <link href="../../static/styles/filter.css" rel="stylesheet" type="text/css" />
     <title>Кандидаты</title>
 </head>
 <body>
@@ -110,7 +111,170 @@
         </ul>
     </nav>
     <div class="filter display_none">
+        <form class="filter_form">
+            <div class="header_filter">
+                <h3>Фильтры</h3>
+                <button class="filter_close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 18.0001L18.0001 6" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18.0001 18.0001" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <h4>По ключевым словам </h4>  
+            <label class="filter--serch">
+                <input class="form_elem_style" type="text">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="7.2508" cy="7.23475" rx="5.10236" ry="5.18397" stroke="#B3B3B3"/>
+                    <path d="M10.9473 10.9609L13.8505 13.9492" stroke="#B3B3B3" stroke-linecap="round"/>
+                </svg>
+            </label>
+            <select class="filter--select form_elem_style">
+                <option value="">Все слова</option>
+                <option value="test">Тестирование</option>
+            </select>
+            <select class="filter--select form_elem_style">
+                <option value="">Везде</option>
+                <option value="test">Тестирование</option>
+            </select>
+            <button class="form_elem_style button_form_color">Добавить условие +</button>
+            <label class="salary">
+                <h4>Зарплата (руб./мес.)</h4>
+                <div class="salary-div">
+                    <select class="filter_element--select">
+                        <option value="">От</option>
+                        <option value="test">10000</option>
+                        <option value="test">20000</option>
+                        <option value="test">30000</option>
+                        <option value="test">40000</option>
+                        <option value="test">50000</option>
+                        <option value="test">60000</option>
+                        <option value="test">70000</option>
+                        <option value="test">80000</option>
+                        <option value="test">90000</option>
+                        <option value="test">100000</option>
+                    </select>
+                    <select class="filter_element--select">
+                        <option value="">До</option>
+                        <option value="test">10000</option>
+                        <option value="test">20000</option>
+                        <option value="test">30000</option>
+                        <option value="test">40000</option>
+                        <option value="test">50000</option>
+                        <option value="test">60000</option>
+                        <option value="test">70000</option>
+                        <option value="test">80000</option>
+                        <option value="test">90000</option>
+                        <option value="test">100000</option>
+                    </select>
+                </div>
+            </label>
+            <label class="age">
+                <h4>Возраст</h4>
+                <div class="salary-div">
+                    <select class="filter_element--select">
+                        <option value="">От</option>
+                        <option value="test">18</option>
+                        <option value="test">30</option>
+                        <option value="test">35</option>
+                        <option value="test">40</option>
+                        <option value="test">45</option>
+                        <option value="test">50</option>
+                        <option value="test">55</option>
+                        <option value="test">60</option>
+                        <option value="test">60+</option>
+                    </select>
+                    <select class="filter_element--select">
+                        <option value="">До</option>
+                        <option value="test">18</option>
+                        <option value="test">30</option>
+                        <option value="test">35</option>
+                        <option value="test">40</option>
+                        <option value="test">45</option>
+                        <option value="test">50</option>
+                        <option value="test">55</option>
+                        <option value="test">60</option>
+                        <option value="test">60+</option>
+                    </select>
+                </div>
+            </label>
+            <label class="filter--checkbox">
+                <h4>Тип занятости</h4>
+                <div>
+                    <input type="checkbox" value="busyness_full"/><span>Полная</span>
+                </div>
+                <div>
+                    <input type="checkbox" value="busyness_partial"/><span>Частичная</span>
+                </div>
+                <div>
+                    <input type="checkbox" value="busyness_internship"/><span>Стажировка</span>
+                </div>
+            </label>
+            <label class="filter--checkbox">
+                <h4>График работы</h4>
+                <div>
+                    <input type="checkbox" value="work_schedule_full"/><span>Полный день</span>
+                </div>
+                <div>
+                    <input type="checkbox" value="work_schedule_flexible"/><span>Гибкий график</span>
+                </div>
+                <div>
+                    <input type="checkbox" value="work_schedule_shift"/><span>Вахтовый метод</span>
+                </div>
 
+                
+            </label>
+            <label class="filter--checkbox">
+                <h4>Место работы</h4>
+                <div>
+                    <input type="checkbox" value="place_of_work_employer"/><span>У работодателя</span>
+                </div>
+                <div>
+                    <input type="checkbox" value="place_of_work_remotely"/><span>Удаленно</span>
+                </div>
+                <div>
+                    <input type="checkbox" value="place_of_work_unknown"/><span>Неизвестно</span>
+                </div>
+            </label>
+            <label class="filter--checkbox">
+               <h4>Опыт работы</h4>
+               <div>
+                    <input type="checkbox" value="work_experience_no"/><span>Без опыта</span>
+               </div>
+                
+                <div>
+                    <input type="checkbox" value="work_experience_3"/><span>От 1 года до 3 лет</span>
+                </div>
+                
+                <div>
+                    <input type="checkbox" value="work_experience_6"/><span>От 3 года до 6 лет</span>
+                </div>
+            </label>
+            <div class="filter_radio">
+                <h4>Пол</h4>
+                <div>
+                    <input type="radio" value="not_important" id="not_important" name="gender" />
+                    <label for="not_important">Не важно</label>
+                </div>
+                <div>
+                    <input type="radio" value="mans" id="mans" name="gender" />
+                    <label for="mans">Мужской</label>
+                </div>
+                <div>
+                    <input type="radio" value="woman" id="woman" name="gender" />
+                    <label for="woman">Женский</label>
+                </div>
+            </div>
+            <h4>Город пребывания</h4>
+            <select class="filter_sity--select form_elem_style">
+                <option value="">Любой</option>
+                <option value="test">Москва</option>
+                <option value="test">Санкт-Петербург</option>
+                <option value="test">Минск</option>
+            </select>
+            <button class="form_elem_style filter_button_ok">Применить</button>
+            <button class="form_elem_style filter_button_clear">Сбросить</button>
+        </form>
     </div>
     <div class="content_page">
         <header class="header">
@@ -158,7 +322,13 @@
         <main class="main">
             <div class="selection_window">
                 <div class="selection_count display_none">
-                    <button onclick="openElement(this)" value="clear" class="selection_clear">X Сбросить</button>
+                    <button onclick="openElement(this)" value="clear" class="selection_clear">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 18.0001L18.0001 6" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 6L18.0001 18.0001" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>Сбросить</p>
+                    </button>
                     <p>Выбрано <span class="countCheckt">3</span></p>
                 </div>
                 <div class="selection_count--buttons display_none">
