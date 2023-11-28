@@ -10,28 +10,28 @@ CREATE TABLE users (
 
 --Заполнение таблицы авторизации тестовыми данными
 INSERT INTO users (username, password, role, firstname, lastname) VALUES (
-    'recruiter',
+    'recruiter@glazgo.ru',
     '$2a$12$jaYPFrUq5oSsH5iSCAgR/OPzvJwLVBF.jctrOO.kbWduWb0TsYP/e',
     'RECRUITER',
     'Иван',
     'Иванов');
 
 INSERT INTO users (username, password, role, firstname, lastname) VALUES (
-    'admin-recruiter',
+    'admin-recruiter@glazgo.ru',
     '$2a$12$jaYPFrUq5oSsH5iSCAgR/OPzvJwLVBF.jctrOO.kbWduWb0TsYP/e',
     'ADMIN_RECRUITER',
     'Пётр',
     'Петров');
 
 INSERT INTO users (username, password, role, firstname, lastname) VALUES (
-    'customer',
+    'customer@glazgo.ru',
     '$2a$12$jaYPFrUq5oSsH5iSCAgR/OPzvJwLVBF.jctrOO.kbWduWb0TsYP/e',
     'CUSTOMER',
     'Андрей',
     'Андреев');
 
 INSERT INTO users (username, password, role, firstname, lastname) VALUES (
-    'customer-manager',
+    'customer-manager@glazgo.ru',
     '$2a$12$jaYPFrUq5oSsH5iSCAgR/OPzvJwLVBF.jctrOO.kbWduWb0TsYP/e',
     'CUSTOMER_MANAGER',
     'Фёдор',

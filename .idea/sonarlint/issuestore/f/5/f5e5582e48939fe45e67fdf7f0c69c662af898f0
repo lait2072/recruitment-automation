@@ -1,7 +1,9 @@
 
 i
-java:S1192+"GDefine a constant instead of duplicating this literal "/login" 4 times.(—ŞŸşÿÿÿÿ8¬êÖ»À1
-o
-java:S1128"MRemove this unused import 'org.springframework.boot.web.server.MimeMappings'.(Ô¡†şşÿÿÿÿ8„õß»À1
+java:S1192+"GDefine a constant instead of duplicating this literal "/login" 4 times.(—ŞŸşÿÿÿÿ8«›üŠÁ1
+
+java:S1128"mRemove this unused import 'org.springframework.security.web.authentication.logout.HeaderWriterLogoutHandler'.(ßôÕ´üÿÿÿÿ8¸›üŠÁ1
+ƒ
+java:S1128"fRemove this unused import 'org.springframework.security.web.header.writers.ClearSiteDataHeaderWriter'.(ô‰»ş8¸›üŠÁ1
 }
-java:S1128"[Remove this unused import 'org.springframework.boot.web.server.WebServerFactoryCustomizer'.(ñËòúÿÿÿÿ8„õß»À1
+java:S1128"`Remove this unused import 'org.springframework.security.web.util.matcher.AntPathRequestMatcher'.(¼¸ö8Óİ€‹Á1
