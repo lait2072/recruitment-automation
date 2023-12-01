@@ -16,7 +16,10 @@ public class VacanciesService {
     public VacanciesService(VacanciesRepository vacanciesRepository) {
         this.vacanciesRepository = vacanciesRepository;
     }
-
+    /**
+     * Метод нахождения всех вакансий
+     * @return список всех вакансий
+     */
     public List<Vacancies> findAllVacancies() {
       return vacanciesRepository.findAll();
     }

@@ -3,39 +3,68 @@ package com.team13.recruitmentautomation.model;
 import jakarta.persistence.*;
 import java.time.LocalDate;
 
+/**
+ * Класс сущность "Вакансия"
+ */
 @Entity
 @Table(name = "vacancies")
 public class Vacancies {
-
+    /**
+     *Поле с уникальным идентификатором
+     */
     @Id
     @Column(name = "id", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
+    /**
+     * Поле название вакансии
+     */
     @Column(name = "nameVacancy", nullable = false)
     private String nameVacancy;
-
+    /**
+     * Поле оплата в случае взятия на работу
+     */
     @Column(name = "salary")
     private int salary;
-
+    /**
+     * Поле статус вакансии
+     */
     @Column(name = "status_vacancy")
     private String status;
-
+    /**
+     * Поле дата закрытия вакансии
+     */
     @Column(name = "close_vacancy")
     private LocalDate closeVacancy;
-
+    /**
+     * Поле ответственный
+     */
     @Column(name = "respons_vacancy")
     private String responsVacancy;
-
+    /**
+     * Поле заказчик
+     */
     @Column(name = "consumer")
     private String consumer;
-
+    /**
+     * Поле кандидат
+     */
     @Column(name = "candidate_vacancy")
     private String candidate;
 
     public Vacancies() {
     }
 
+    /**
+     * Конструктор с параметрами
+     * @param nameVacancy - наименование вакансии
+     * @param salary - доход
+     * @param status - статус вакансии
+     * @param closeVacancy - дата закрытия вакансии
+     * @param responsVacancy - ответственный
+     * @param consumer - заказчик
+     * @param candidate - кандидат на вакансию
+     */
     public Vacancies(String nameVacancy, int salary, String status, LocalDate closeVacancy, String responsVacancy, String consumer, String candidate) {
         this.nameVacancy = nameVacancy;
         this.salary = salary;

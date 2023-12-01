@@ -1,40 +1,68 @@
 package com.team13.recruitmentautomation.model;
 
-
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
+/**
+ * Класс сущность "Заявка"
+ */
 @Entity
 @Table(name = "applications")
 public class Applications {
-
+    /**
+     *Поле с уникальным идентификатором
+     */
     @Id
     @Column(name = "id", nullable = false, unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    /**
+     * Наименование компании
+     */
     @Column(name = "name_company")
     private String nameCompany;
-
+    /**
+     * Поле статус заявки
+     */
     @Column(name = "status_app")
     private String status;
-
+    /**
+     * Поле заказчик
+     */
     @Column(name = "customer_app")
     private String customer_app;
-
+    /**
+     * Поле ответственный
+     */
     @Column(name = "respon_app")
     private String respon_app;
-
+    /**
+     * Дата закрытия заявки
+     */
     @Column(name = "close_app")
     private LocalDate close_app;
-
+    /**
+     * Поле ссылка на вакансию
+     */
     @Column(name = "url_vacancy")
     private String url_vacancy;
 
+    /**
+     * Конструктор без параметров
+     */
     public Applications() {
     }
 
+    /**
+     * Конструктор с параметрами
+     * @param nameCompany - наименование компании, которая подает заявку
+     * @param status - статус
+     * @param customer_app - заказчик
+     * @param respon_app - ответственный
+     * @param close_app - дата закрытия заявки
+     * @param url_vacancy - ссылка на вакансию
+     */
     public Applications(String nameCompany, String status, String customer_app, String respon_app, LocalDate close_app, String url_vacancy) {
         this.nameCompany = nameCompany;
         this.status = status;

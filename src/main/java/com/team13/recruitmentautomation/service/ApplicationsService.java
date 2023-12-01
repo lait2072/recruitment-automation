@@ -18,10 +18,17 @@ public class ApplicationsService {
         this.applicationsRepository = applicationsRepository;
     }
 
+    /**
+     * Метод нахождения всех заявок
+     * @return список заявок
+     */
     public List<Applications> findAllApplications() {
         return applicationsRepository.findAll();
     }
-
+    /**
+     * Методнахождения одной заявки по уникальному номеру
+     * @return одну заявку по уникальному номеру или null
+     */
     public Applications findCandidateById(long id) {
         Optional<Applications> foundApplications = applicationsRepository.findById(id);
         return foundApplications.orElse(null);
