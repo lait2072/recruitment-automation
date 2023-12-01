@@ -1,0 +1,21 @@
+body {
+    display: flex;
+}
+
+.content_page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+}
+
+.filter {
+    width: 23vw;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.display_none {
+    display: none;
+}

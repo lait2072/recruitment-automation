@@ -1,89 +1,142 @@
 package com.team13.recruitmentautomation.controller;
 
+import com.team13.recruitmentautomation.service.ApplicationsService;
+import com.team13.recruitmentautomation.service.CandidatesService;
+import com.team13.recruitmentautomation.service.VacanciesService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+/**
+ * Controller for recruiter endpoints
+ * @author Mylov Sergey <mylov91@yandex.ru>
+ * @version 1.0
+ */
 @Controller
 public class RecruiterController {
 
-    // Вставить private final репозитории и конструктор
-    private final CandidatesRepository candidatesRepository;
-    private final ApplicationsRepository applicationsRepository;
-    private final VacanciesRepository vacanciesRepository;
-    private final EmailTemplatesRepository emailTemplatesRepository;
+    /**
+     * Inject services for loading objects from database
+     * For correct work of application there should be EmailTemplatesService
+     * @see CandidatesService
+     * @see ApplicationsService
+     * @see VacanciesService
+     */
+    private final CandidatesService candidatesService;
+    private final ApplicationsService applicationsService;
+    private final VacanciesService vacanciesService;
+
+    @Autowired
+    public RecruiterController(CandidatesService candidatesService, ApplicationsService applicationsService, VacanciesService vacanciesService) {
+        this.candidatesService = candidatesService;
+        this.applicationsService = applicationsService;
+        this.vacanciesService = vacanciesService;
+    }
 
 
-    // Возвращает список всех кандидатов
+    /**
+     * Show all candidates
+     * @param model used for transfer data from view form to controller
+     * @return html form to display all candidates
+     */
     @GetMapping("/recruiter/candidates")
-    public String showAllCandidates() {
-        // Вставить метод сервиса
-        candidatesRepository.findAll();
+    public String showAllCandidates(Model model) {
+        candidatesService.findAllCandidates();
+        /**
+         * There should be model.addAllAttributes() part
+         */
         return "recruiter/candidates";
     }
 
-    // Возвращает 1 кандидата с переданным id
+    /**
+     * Show selected candidate
+     * @param id unique identifier in database
+     * @param model used for transfer data from view form to controller
+     * @return html form to display selected candidate
+     */
     @GetMapping("/recruiter/candidates/{id}")
-    public String showCandidate(@PathVariable("id") int id) {
-        // Вставить метод сервиса
-        candidatesRepository.findOne(id);
+    public String showCandidate(@PathVariable("id") int id, Model model) {
+        candidatesService.findCandidateById(id);
+        /**
+         * There should be model.addAllAttributes() part
+         */
         return "recruiter/candidate";
     }
 
-    // Возвращает список всех заявок на подбор
+    /**
+     * Show all applications
+     * @param model used for transfer data from view form to controller
+     * @return html form to display all applications
+     */
     @GetMapping("/recruiter/applications")
-    public String showAllApplications() {
-        // Вставить метод сервиса
-        applicationsRepository.findAll();
+    public String showAllApplications(Model model) {
+        applicationsService.findAllApplications();
         return "recruiter/applications";
     }
 
-    // Возвращает 1 заявку с переданным id
+    /**
+     * Show selected application
+     * @param id unique identifier in database
+     * @param model used for transfer data from view form to controller
+     * @return html form to display selected candidate
+     */
     @GetMapping("/recruiter/applications/{id}")
-    public String showCandidate(@PathVariable("id") int id) {
-        // Вставить метод сервиса
-        applicationsRepository.findOne(id);
+    public String showApplication(@PathVariable("id") int id, Model model) {
+        applicationsService.findCandidateById(id);
         return "recruiter/application";
     }
 
-    // Возвращает все вакансии
+    /**
+     * Show all vacancies
+     * @param model used for transfer data from view form to controller
+     * @return html form to display all vacancies
+     */
     @GetMapping("/recruiter/vacancies")
-    public String showVacancies() {
-        // Вставить метод сервиса
-        vacanciesRepository.findAll();
+    public String showVacancies(Model model) {
+        vacanciesService.findAllVacancies();
         return "recruiter/vacancies";
     }
 
-    // Возвращает окно создания новой вакансии
+    /**
+     * Show create vacancy page
+     * @param model used for transfer data from view form to controller
+     * @return html form to display create vacancy page
+     */
     @PostMapping("/recruiter/vacancies/create-vacancy")
-    public String showNewVacancy() {
-        // Вставить метод сервиса
-        vacanciesRepository.
+    public String showNewVacancy(Model model) {
         return "recruiter/create_vacancy";
     }
 
-    // Возвращает все шаблоны email
-    @GetMapping("/recruiter/vacancies/email-templates")
-    public String showEmailTemplates() {
-        // Вставить метод сервиса
-        emailTemplatesRepository.findAll();
+    /**
+     * Show all email templates
+     * @param model used for transfer data from view form to controller
+     * @return html form to display all email templates
+     */    @GetMapping("/recruiter/vacancies/email-templates")
+    public String showEmailTemplates(Model model) {
         return "recruiter/email_templates";
     }
 
-    // Возвращает окно создания шаблона email
+    /**
+     * Show create email template page
+     * @param model used for transfer data from view form to controller
+     * @return html form to display create email template
+     */
     @PostMapping("/recruiter/vacancies/email-templates/create-template")
-    public String showNewTemplate() {
-        // Вставить метод сервиса
-        emailTemplatesRepository.;
+    public String showNewTemplate(Model model) {
         return "recruiter/create_template";
     }
 
-    // Возвращает окно редактирования шаблона email
+    /**
+     * Show edit email template page
+     * @param id unique identifier in database
+     * @param model used for transfer data from view form to controller
+     * @return html form to display edit email template
+     */
     @PostMapping("/recruiter/vacancies/email-templates/edit-template/{id}")
-    public String showEditTemplate(@PathVariable int id) {
-        // Вставить метод сервиса и передать в него аргумент id
-        emailTemplatesRepository.;
+    public String showEditTemplate(@PathVariable int id, Model model) {
         return "recruiter/edit_template";
     }
 }
