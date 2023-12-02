@@ -43,3 +43,5 @@ Osrc/main/java/com/team13/recruitmentautomation/service/ApplicationsService.java
 Msrc/main/java/com/team13/recruitmentautomation/service/CandidatesService.java,0/e/0e431c0c65e2c3dd32dcbde9b53c12025162c969
 |
 Lsrc/main/java/com/team13/recruitmentautomation/service/VacanciesService.java,4/d/4dd5de6ca137a33a2972e57c8f9273b604039ed4
+p
+@src/main/java/com/team13/recruitmentautomation/WhatsAppSend.java,b/e/beb847507730afc12d62a82a5ea67683e322b89d

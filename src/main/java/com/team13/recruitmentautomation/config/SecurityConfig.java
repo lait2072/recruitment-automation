@@ -65,9 +65,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/login").permitAll()
                         .requestMatchers("/recruiter/**").hasAnyAuthority("RECRUITER", "ADMIN_RECRUITER")
-                        .requestMatchers("/admin-recruiter/**").hasAnyAuthority("ADMIN_RECRUITER")
                         .requestMatchers("/customer/**").hasAnyAuthority("CUSTOMER", "CUSTOMER_MANAGER")
-                        .requestMatchers("/customer-manager/**").hasAnyAuthority("CUSTOMER_MANAGER")
                         .anyRequest().authenticated())
                 .logout(logout -> logout
                         .logoutUrl("/logout")
